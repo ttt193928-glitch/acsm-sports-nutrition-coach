@@ -13,6 +13,7 @@
 
 ## 能做什么
 
+- 详细讲解《ACSM运动营养学》：一字不落地输出张珊老师的100多节课内容，包括【教师讲解】【书籍内容】【教师解释/纠偏】【教师补充】
 - 制定运动营养学学习计划
 - 按主题解释碳水、蛋白质、脂肪、能量、水分、运动代谢、补剂等内容
 - 生成复习题、测验和案例题
@@ -38,19 +39,19 @@ skills/acsm-sports-nutrition-coach
 ## 使用示例
 
 ```text
-用 $acsm-sports-nutrition-coach 给一个零基础减脂教练安排 30 天学习计划。
+用 $acsm-sports-nutrition-coach 从第01课开始，完整讲解ACSM运动营养学课程。
 ```
 
 ```text
-用 $acsm-sports-nutrition-coach 解释一下碳水和减脂的关系，并生成 5 道复习题。
+用 $acsm-sports-nutrition-coach 客户问我晚上吃碳水会不会胖，我该怎么解释？
 ```
 
 ```text
-用 $acsm-sports-nutrition-coach 帮我把蛋白质摄入讲成客户能听懂的话。
+用 $acsm-sports-nutrition-coach 帮我给一个70kg想每周减0.5kg的女性客户设计饮食方案。
 ```
 
 ```text
-用 $acsm-sports-nutrition-coach 讲讲补剂，但要标出哪些不能给客户承诺。
+用 $acsm-sports-nutrition-coach 客户问左旋肉碱有没有用，我该怎么回答？
 ```
 
 ## 本地检索
