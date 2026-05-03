@@ -103,14 +103,31 @@ Apply replacements in all responses without calling attention to them.
 
 **Steps:**
 1. Silently read the complete lesson content (all sections from start to end)
-2. Output the complete original text with only these format changes:
-   - Remove source labels: 【讲师原话】【书中内容/讲师转述原书】【讲师解释/纠偏】【讲师补充】
-   - Keep topic headers: "## 01. 课程开场", "## 02. 第一章是导论性质"
-   - Simplify headers: remove "书中内容：" or "讲师解释：" prefixes, keep only the topic
-   - Output the exact original text under each header, word-for-word
-3. Do NOT write summaries like "张珊老师介绍了..." - copy the original sentences
-4. Do NOT condense multiple paragraphs into one sentence
-5. Do NOT skip any paragraphs or sections
+2. Output the complete original text with ONLY these changes:
+   - **DELETE all source labels**: 【讲师原话】【书中内容/讲师转述原书】【讲师解释/纠偏】【讲师补充】
+   - **KEEP section headers**: "## 01. 课程开场", "## 02. 第一章是导论性质"
+   - **OUTPUT EVERY WORD** from the original file under each header
+   
+   **Example of correct output:**
+   ```
+   ## 01. 课程开场：课程节奏和学习方式
+   
+   咱们课程今天是第一节课，咱们一开始讲的慢一点，我们每节课节奏慢一点，不讲太多，讲的量适当控制一些，这样的话我们有一个适应的过程，大家多体会一下，看看这个节奏行不行。另外咱们有些同学是零基础，我们默认大家都是从零基础起步，这样的话能照顾到最多的同学，所以说咱们。一定要注意，打基础很关键，这个时候我们不讲太多，首先让大家能够理解每节课的体量不要太大。
+   
+   可以了。好的，好，咱们呢一开始每节课体量不要太大，我们说不要讲太多，让大家适应一下，体会一下这个节奏。目前打基础，咱们先讲最关键的，我们说呢现在讲的内容，好的，现在讲内容都是基础，我们是从零基础的角度讲最关键的东西，所以说我们呢。目前这个阶段不讲太多，也不讲太深。好，我们大家在讲课的时候听懂还是第一步。最主要是要听懂，其次要记笔记，把重要的，咱们上次班会讲了，把重要东西记下来。首先理解听懂就很重要，咱们先从运动营养学入手。
+   ```
+   
+   **Example of WRONG output (DO NOT DO THIS):**
+   ```
+   ## 01. 课程开场：课程节奏和学习方式
+   
+   张珊老师介绍了课程节奏，强调从零基础起步，打好基础很关键。
+   ```
+
+3. **CRITICAL**: If the original section has 500 words, output all 500 words. If it has 10 paragraphs, output all 10 paragraphs.
+4. Do NOT write summaries like "张珊老师介绍了..." - copy the original sentences
+5. Do NOT condense multiple paragraphs into one sentence
+6. Do NOT skip any paragraphs or sections
 6. After outputting the COMPLETE lesson content, provide a mastery check with 2-3 questions:
    
    **Format:**
