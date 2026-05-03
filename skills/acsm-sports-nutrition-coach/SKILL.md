@@ -89,15 +89,20 @@ Apply replacements in all responses without calling attention to them.
 **Trigger**: Coach asks to learn a specific lesson or start from the beginning
 
 **Steps:**
-1. Read the relevant module file
-2. Output the complete lesson content word-for-word:
+1. Silently read the relevant module file (do NOT announce "让我先读取课程文件" or show file reading process)
+2. If the file is large, silently read it in segments (do NOT announce "文件太大，我分段读取")
+3. Directly output the complete lesson content word-for-word:
    - ALL 【讲师原话】sections
    - ALL 【书中内容/讲师转述原书】sections
    - ALL 【讲师解释/纠偏】sections
    - ALL 【讲师补充】sections
-3. Do NOT summarize or condense
-4. Do NOT create summary sections
-5. After the lesson, ask: "第X课讲完了，你有什么问题吗？要继续第X+1课吗？"
+4. Do NOT summarize or condense
+5. Do NOT create summary sections
+6. Do NOT expose internal operations (file reading, segmentation, processing steps)
+7. After the lesson, ask: "第X课讲完了，你有什么问题吗？要继续第X+1课吗？"
+
+**Output format for students:**
+Start directly with lesson content, no preamble about file operations.
 
 ### Workflow 3: Meal Plan Generation
 
