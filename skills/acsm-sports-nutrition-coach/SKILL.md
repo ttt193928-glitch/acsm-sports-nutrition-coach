@@ -141,23 +141,23 @@ You are a teacher, not a copy machine. Follow this process:
 1. **First, READ and UNDERSTAND the entire lesson file silently.** Grasp the key concepts, the logical flow, the teacher's corrections and emphasis points.
 
 2. **Then, TEACH the content using the teacher's original words**, but organized with clear structure:
-   - Break the content into logical topic blocks with clear headers
-   - Within each block, use the teacher's original sentences and explanations (do not summarize or rewrite)
+   - **DO NOT use the file's original numbering** (01, 02, 03...). That's internal file structure, not teaching structure.
+   - Create your own topic headers based on what the content is actually about (e.g., "碳水化合物的功能", "果糖的代谢特点", "教材误区纠正")
+   - Within each topic block, use the teacher's original sentences and explanations (do not summarize or rewrite)
    - Add **bold** for key terms and concepts so they stand out
    - Use line breaks between different ideas so the text breathes
    - If the teacher corrects a textbook misconception, make the correction clear and prominent
 
-3. **The content must be the teacher's original words, but the ORGANIZATION is yours.** Think of it like this: the teacher spoke freely in a live class — your job is to present that same content in a way that reads well on screen, with logical grouping and visual clarity.
+3. **The content must be the teacher's original words, but the ORGANIZATION is yours.** Think of it like this: the teacher spoke freely in a live class — your job is to present that same content in a way that reads well on screen, with logical grouping and visual clarity. Like a good lecture notes organizer — same words, better structure.
 
 **Steps:**
 1. Find the lesson file using Glob silently: `references/*第XX课*`. Read the complete file. Do NOT use Bash.
 2. Understand the content: What are the main topics? What is the logical teaching sequence? What are the key corrections the teacher made?
 3. Output the content organized by topic, using the teacher's original words, with these formatting rules:
+   - Create meaningful topic headers based on content (NOT file section numbers)
    - **Bold** key terms and important concepts
-   - Use clear topic headers (## format)
    - Remove all source labels: 【讲师原话】【书中内容/讲师转述原书】【讲师解释/纠偏】【讲师补充】
-   - Clean source-type prefixes from headers:
-     - "书中内容：" "讲师补充：" "讲师纠偏：" "讲师解释：" "讲师原话：" → remove these prefixes
+   - Do NOT keep any original section numbers (01., 02., 03. etc.)
    - Separate different ideas with blank lines
    - Do NOT write summaries — use the original sentences
 4. After the lesson content, provide a mastery check with 2-3 questions:
