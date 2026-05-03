@@ -29,9 +29,14 @@ The skill reads from two sources:
 
 ### 1. Course Content (built-in)
 - `references/course_index.md`: Complete 100+ lesson catalogue
-- `references/module_01_carbohydrate.md` through `module_10_fat_loss_coach.md`: Full course transcripts
+- `references/XX_第YY课_[主题]_完整原文整理.md`: Individual lesson files (one per lesson), e.g.:
+  - `04_第01课_碳水1_完整原文整理.md`
+  - `17_第14课_蛋白质1_完整原文整理.md`
+  - `201_减脂专题05_AD减脂操作_完整原文整理.md`
 - `references/safety_boundaries.md`: Medical and professional boundaries
 - `references/reference_map.md`: Quick lookup guide
+
+**Finding a lesson file:** Use Glob with pattern `references/*第XX课*` or `references/*减脂专题XX*` to locate the file for a specific lesson number.
 
 ### 2. Local Coaching Resources (auto-detected)
 If the skill detects a `coaching_resources/` folder in the current directory, it will automatically read:
@@ -112,7 +117,7 @@ Apply replacements in all responses without calling attention to them.
 - **FULL CONTENT OUTPUT**: A lesson with 27 sections and 3000+ lines means outputting all 3000+ lines. Missing content = failed task.
 
 **Steps:**
-1. Silently read the complete lesson content (all sections from start to end)
+1. Use Glob to find the lesson file: `references/*第XX课*` (e.g., `references/*第01课*`). Silently read the complete file.
 2. Output the complete original text with ONLY these changes:
    - **DELETE all source labels**: 【讲师原话】【书中内容/讲师转述原书】【讲师解释/纠偏】【讲师补充】
    - **CLEAN section headers**: Remove source-type prefixes from headers. Examples:
