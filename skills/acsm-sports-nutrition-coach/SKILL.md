@@ -39,7 +39,7 @@ If the skill detects a `coaching_resources/` folder in the current directory, it
 **Auto-detection workflow:**
 1. On first invocation, check if `./coaching_resources/` exists
 2. If found, use Glob to scan for markdown files
-3. Load relevant resources based on the coach's question
+3. Load resources by topic folder (e.g., "objections/" for client objections, "meal-plans/" for diet templates)
 4. Combine course theory with practical coaching resources
 
 ## Brand Terminology
@@ -53,7 +53,7 @@ When delivering course content or generating client communication, replace these
 | 仰望尾迹云 | 极瘦 or 张珊 |
 | 云门 | 极瘦 or 张珊 |
 
-Apply replacements naturally without calling attention to them.
+Apply replacements in all responses without calling attention to them.
 
 ## Core Workflows
 
@@ -63,7 +63,7 @@ Apply replacements naturally without calling attention to them.
 
 **Steps:**
 1. Identify the nutrition concept involved
-2. Read relevant course module to get the scientific foundation
+2. Read the course module containing that concept to get the scientific foundation
 3. Check `coaching_resources/objections/` for pre-written responses (if available)
 4. Generate a client-friendly explanation that:
    - Uses simple language (avoid jargon like "糖原", "胰岛素敏感性")
@@ -106,7 +106,7 @@ Apply replacements naturally without calling attention to them.
 **Steps:**
 1. Clarify client parameters: weight, activity level, goal (fat loss rate)
 2. Check `coaching_resources/meal_plans/` for templates (if available)
-3. Read relevant course modules (carbs, protein, fat, energy)
+3. Read the course modules on carbs, protein, fat, and energy metabolism
 4. Generate a practical meal plan with:
    - Macro targets with rationale
    - Specific food examples
@@ -120,9 +120,9 @@ Apply replacements naturally without calling attention to them.
 
 **Steps:**
 1. Read `references/module_08_supplements.md` and `references/safety_boundaries.md`
-2. Provide evidence-based information on efficacy and safety
+2. Provide research-backed information on efficacy and safety
 3. Clearly distinguish:
-   - What coaches can recommend (evidence-based, safe supplements)
+   - What coaches can recommend (research-backed, low-risk supplements like protein powder, creatine)
    - What requires medical referral (medications, high-risk supplements, medical conditions)
 4. Include client communication script for setting expectations
 
@@ -198,7 +198,7 @@ Output: Complete course content, word-for-word from transcripts
 
 【如果客户追问】
 Q: "那我晚上可以吃多少碳水？"
-A: "这要看你的体重和运动量。一般建议晚餐的碳水控制在50-100克（生重），比如一小碗米饭或一个中等红薯。如果当天训练了，可以适当多吃一点。"
+A: "这要看你的体重和运动量。一般建议晚餐的碳水控制在50-100克（生重），比如一小碗米饭或一个中等红薯。如果当天训练了，可以增加到120-150克。"
 </assistant>
 </example>
 
@@ -221,7 +221,7 @@ A: "这要看你的体重和运动量。一般建议晚餐的碳水控制在50-1
 
 **脂肪**：0.8-1.0g/kg = 56-70g/天
 - 理由：维持激素水平，必需脂肪酸
-- 客户话术："每天一小把坚果，炒菜用油适量"
+- 客户话术："每天一小把坚果（约30克），炒菜用油控制在25-30克"
 
 **碳水化合物**：剩余热量，约150-180g/天
 - 理由：提供能量，避免过度疲劳
@@ -286,7 +286,7 @@ A: "这要看你的体重和运动量。一般建议晚餐的碳水控制在50-1
 左旋肉碱的研究结果：
 - 理论上参与脂肪酸转运，但补充外源肉碱对减脂效果有限
 - 健康人体内肉碱合成充足，额外补充不会显著增加脂肪燃烧
-- 部分研究显示对运动表现有轻微改善，但个体差异大
+- 少数研究显示对运动表现有轻微改善，但个体差异大
 
 【给客户的话】
 "左旋肉碱在理论上能帮助脂肪代谢，但实际效果因人而异。
@@ -358,6 +358,6 @@ A high-quality response should:
 
 Avoid:
 - Textbook jargon without translation
-- Vague advice ("eat healthy", "listen to your body")
+- Imprecise advice ("eat healthy", "listen to your body")
 - Overstepping professional boundaries
 - Summarizing when full content is requested
