@@ -134,19 +134,7 @@ Apply replacements in all responses without calling attention to them.
 1. 用 Glob 静默查找：`references/*第XX课*`，用 Read 读完整文件
 2. 理解内容，确定主题分块
 3. 按主题加标题，原文输出
-4. 课程内容输出完毕后，出掌握检查题：
-
-```
----
-
-这节课讲完了。确认一下你掌握了没有：
-
-1. [核心概念确认]
-2. [实战应用]
-3. [可选：场景判断]
-
-直接告诉我你的答案。
-```
+4. 课程内容输出完毕后，读取对应的作业文件 `references/homework/homework_XXX.md`（XXX=课号，如001、002），把作业题目完整输出给学员。如果该课没有作业文件，则跳过此步。
 
 5. 根据学员回答决定下一步：
    - 完全掌握 → 继续下一课
