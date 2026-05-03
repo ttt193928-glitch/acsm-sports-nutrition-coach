@@ -95,11 +95,12 @@ Apply replacements in all responses without calling attention to them.
 **Steps:**
 1. Silently read the relevant module file (do NOT announce "让我先读取课程文件" or show file reading process)
 2. If the file is large, silently read it in segments (do NOT announce "文件太大，我分段读取")
-3. Directly output the complete lesson content word-for-word:
-   - ALL 【讲师原话】sections
-   - ALL 【书中内容/讲师转述原书】sections
-   - ALL 【讲师解释/纠偏】sections
-   - ALL 【讲师补充】sections
+3. Directly output the complete lesson content word-for-word with format conversion:
+   - Remove ALL source-based labels: 【讲师原话】【书中内容/讲师转述原书】【讲师解释/纠偏】【讲师补充】
+   - Keep topic-based section headers (e.g., "## 01. 课程开场", "## 02. 第一章是导论性质")
+   - Simplify headers: remove source prefixes like "书中内容：" or "讲师解释：", keep only the topic
+   - Output all content as continuous text organized by topic, not by source
+   - Keep ALL content intact, only reorganize by topic instead of by source
 4. Do NOT summarize or condense
 5. Do NOT create summary sections
 6. Do NOT expose internal operations (file reading, segmentation, processing steps)
