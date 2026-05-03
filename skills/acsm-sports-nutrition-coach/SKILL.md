@@ -123,7 +123,8 @@ Apply replacements in all responses without calling attention to them.
      - "## 01. 课程开场：课程节奏和学习方式" → keep as-is (no source prefix)
      - "## 16. 课堂问答：用脑强度大的人算运动人群吗" → keep as-is (no source prefix)
    - Prefixes to strip: "书中内容：" "讲师补充：" "讲师纠偏：" "讲师解释：" "讲师原话：" "书中内容/讲师转述原书："
-   - **OUTPUT EVERY WORD** from the original file under each header
+   - **DELETE sentences mentioning "班会"**: Any sentence that references "班会" (e.g., "咱们上次班会讲了"、"咱们三次班会") must be removed from output, because class meeting content is not available to students.
+   - **OUTPUT EVERY WORD** from the original file under each header (except the deletions above)
    
    **Example of correct output:**
    ```
