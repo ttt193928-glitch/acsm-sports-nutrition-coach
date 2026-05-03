@@ -1,0 +1,7 @@
+interface:
+  display_name: "ACSM 运动营养学教练"
+  short_description: "用课程讲义训练减脂教练的运动营养学助教"
+  brand_color: "#0F766E"
+  default_prompt: "Use $acsm-sports-nutrition-coach to help me build a 30-day ACSM sports nutrition study plan for a beginner fat-loss coach."
+policy:
+  allow_implicit_invocation: true

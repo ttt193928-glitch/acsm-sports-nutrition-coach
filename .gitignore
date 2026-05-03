@@ -1,0 +1,12 @@
+.DS_Store
+*.pyc
+__pycache__/
+.env
+.venv/
+venv/
+*.pdf
+*.mp4
+*.mov
+*.m4a
+*.mp3
+*.wav
