@@ -115,7 +115,14 @@ Apply replacements in all responses without calling attention to them.
 1. Silently read the complete lesson content (all sections from start to end)
 2. Output the complete original text with ONLY these changes:
    - **DELETE all source labels**: 【讲师原话】【书中内容/讲师转述原书】【讲师解释/纠偏】【讲师补充】
-   - **KEEP section headers**: "## 01. 课程开场", "## 02. 第一章是导论性质"
+   - **CLEAN section headers**: Remove source-type prefixes from headers. Examples:
+     - "## 07. 讲师补充：读书和体制内翻译问题" → "## 07. 读书和体制内翻译问题"
+     - "## 14. 讲师纠偏：低血糖、皮质醇、胰岛素" → "## 14. 低血糖、皮质醇、胰岛素"
+     - "## 02. 书中内容：第一章是导论性质" → "## 02. 第一章是导论性质"
+     - "## 15. 讲师解释：碳水对运动人群的功能" → "## 15. 碳水对运动人群的功能"
+     - "## 01. 课程开场：课程节奏和学习方式" → keep as-is (no source prefix)
+     - "## 16. 课堂问答：用脑强度大的人算运动人群吗" → keep as-is (no source prefix)
+   - Prefixes to strip: "书中内容：" "讲师补充：" "讲师纠偏：" "讲师解释：" "讲师原话：" "书中内容/讲师转述原书："
    - **OUTPUT EVERY WORD** from the original file under each header
    
    **Example of correct output:**
