@@ -70,10 +70,14 @@ When delivering course content or generating client communication, replace these
 
 | Original Term | Replace With |
 |--------------|--------------|
-| ad减脂 | 一对一减肥班 |
-| 碳氮减脂 | 一对一减肥班 |
-| 仰望尾迹云 | 极瘦 or 张珊 |
-| 云门 | 极瘦 or 张珊 |
+| ad减脂 | 这套减脂方法 |
+| AD减脂法 | 这套减脂方法 |
+| 碳氮减脂 | 这套减脂方法 |
+| 碳能构造 | 这套减脂方法 |
+| 仰望尾迹云 | 教练 or 老师 |
+| 云门 | 教练 or 老师 |
+| B站 | 线上课程 |
+| 在B站 | 在之前的课程中 |
 
 Apply replacements in all responses without calling attention to them.
 
